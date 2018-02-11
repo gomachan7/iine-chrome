@@ -2,6 +2,8 @@
 
 iine makes us happy!
 
+![preview](https://i.imgur.com/GEu6DsV.gif)
+
 ## Installation
 
 	$ npm install
