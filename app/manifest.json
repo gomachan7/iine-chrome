@@ -7,7 +7,8 @@
   "default_locale": "en",
   "content_scripts": [{
     "matches": ["https://prickathon.github.io/*"],
-    "js": ["scripts/content.js"]
+    "js": ["scripts/content.js"],
+    "css": ["styles/style.css"]
   }],
   "icons": {
     "16": "images/icon-16.png",
