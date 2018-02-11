@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@types/chrome": "^0.x.x",
+    "@types/node": "^9.4.5",
     "babel-cli": "6.x.x",
     "babel-core": "6.x.x",
     "babel-loader": "7.x.x",
@@ -51,6 +52,7 @@
     "gulp-tag-version": "1.x.x",
     "gulp-util": "3.x.x",
     "gulp-zip": "^4.x.x",
+    "nicojs": "^1.1.8",
     "require-dir": "0.x.x",
     "standard": "^10.0.2",
     "ts-loader": "^2.x.x",
