@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "pripara iine",
+    "description": "The name of the application"
+  },
+  "appShortName": {
+    "message": "pripara iin",
+    "description": "The short_name (maximum of 12 characters recommended) is a short version of the app's name."
+  },
+  "appDescription": {
+    "message": "iine makes us happy!",
+    "description": "The description of the application"
+  }
+}
