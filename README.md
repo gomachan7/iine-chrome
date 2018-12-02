@@ -1,8 +1,8 @@
-# pricahn iine
+# prichan iine
 
 iine makes us happy!
 
-![preview](https://i.imgur.com/GEu6DsV.gif)
+![preview](https://user-images.githubusercontent.com/5179670/49337717-b04b1400-f65a-11e8-8318-edd93571f354.gif)
 
 ## Installation
 
