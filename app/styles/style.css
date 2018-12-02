@@ -1,20 +1,139 @@
 .iine {
-  font-size: 4.0em;
-  white-space: nowrap;
-  animation: move 3s 1 linear;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 50px;
+  vertical-align: middle;
+  animation: move 1.5s 1 linear;
+}
+.iine-star {
+  background: #F9B401;
+  color: #FBE19F;
+}
+.iine-star::after {
+    content: "★";
+}
+.iine-heart {
+  background: #E6126A;
+  color: #F9AACB;
+}
+.iine-heart::after {
+    content: "♥";
+}
+.iine-gauge-wrapper {
+    position: fixed;
+    display: inline-block;
+    top: 20px;
+    left: 20px;
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #FBDD48;
+    background-image: radial-gradient(#F9CF30 10%, transparent 20%), radial-gradient(#F9CF30 10%, transparent 20%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+}
+.iine-gauge-icon {
+    position: relative;
+	display: inline-block;
+	margin: 10px 0px 10px 40px;
+	padding: 0 5px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	color: #D6D6D6;
+	font-size: 1.0em;
+	font-weight: bold;
+	background: #999999;
+	border-radius: 50%;
+	box-sizing: border-box;
+}
+.iine-gauge-icon::before {
+	content: "";
+	position: absolute;
+	bottom: -5px;
+	right: -5px;
+	margin-top: -15px;
+	border: 8px solid transparent;
+	border-left: 8px solid #999999;
+	z-index: 0;
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.iine-gauge-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    font-size: 1.5em;
+}
+.iine-gauge-body-content-inactive {
+    margin-right: 5px;
+    color: #D6D6D7;
+}
+.iine-gauge-body-content-active {
+    margin-right: 5px;
+    color: #F59607;
+}
+.iine-gauge-body-content-readyforlive {
+    margin-right: 5px;
+    animation: readyforlive 0.5s infinite 0s linear;
+}
+.iine-gauge-label {
+    position: absolute;
+    top: 42px;
+    left: 100px;
+    vertical-align: middle;
+    font-size: 0.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.ready-for-live {
+    width: 100%;
+    height: 120px;
+    border-radius: 60px;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 50%;
+    margin-top: -45px;
+    left: 0;
+    color: #fff;
+    font-size: 3.0em;
+    text-align: center;
+    line-height: 120px;
+    cursor: pointer;
+}
+.ready-for-live::after {
+    content: "READY FOR LIVE";
 }
 
 @keyframes move {
-  0% {
-    left: 100%;
-  }
+    from {
+        opacity: 1;
+    }
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
 
-  99% {
-    left: 1%;
-  }
-
-  100% {
-    left: 0;
-    display: none;
-  }
-};
+@keyframes readyforlive {
+  0% { color: #e74c3c; }
+  20% { color: #f1c40f; }
+  40% { color: #1abc9c; }
+  60% { color: #3498db; }
+  80% { color: #9b59b6; }
+  100% { color: #e74c3c; }
+}
