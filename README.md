@@ -1,4 +1,4 @@
-# pripara iine
+# pricahn iine
 
 iine makes us happy!
 
