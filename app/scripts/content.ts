@@ -56,6 +56,7 @@ const showReadyForLive = () => {
   readyforlive.className = 'ready-for-live';
   readyforlive.onclick = () => {
     window.open('https://www.youtube.com/watch?v=dieqknxURmg&feature=youtu.be&t=953', '_blank');
+    resetAll();
   };
 
   const body = document.querySelector('body');
@@ -87,6 +88,18 @@ const showIineGauge = () => {
     body.insertAdjacentHTML('beforeend', html);
   }
 };
+
+const resetAll = () => {
+  const readyForLive = document.querySelector('.ready-for-live');
+  if (readyForLive != null) {
+    readyForLive.remove();
+  }
+  const iineGaugeWrapper = document.querySelector('.iine-gauge-wrapper');
+  if (iineGaugeWrapper != null) {
+    iineGaugeWrapper.remove();
+  }
+  totalIine = 0;
+}
 
 let totalIine = 0;
 
